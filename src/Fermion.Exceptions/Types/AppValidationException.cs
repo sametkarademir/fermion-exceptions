@@ -11,7 +11,7 @@ public class AppValidationException : AppException, IHasValidationErrors
     public override LogLevel LogLevel { get; set; } = LogLevel.Error;
     public override int StatusCode { get; set; } = 400;
     public IEnumerable<ValidationExceptionModel> Errors { get; }
-    
+
     public AppValidationException() : base("Validation error")
     {
         Errors = Array.Empty<ValidationExceptionModel>();
@@ -21,18 +21,18 @@ public class AppValidationException : AppException, IHasValidationErrors
     {
         Errors = Array.Empty<ValidationExceptionModel>();
     }
-    
+
     public AppValidationException(string message, Exception innerException) : base(message, innerException)
     {
         Errors = Array.Empty<ValidationExceptionModel>();
     }
-    
-    public AppValidationException(IEnumerable<ValidationExceptionModel> errors) 
+
+    public AppValidationException(IEnumerable<ValidationExceptionModel> errors)
         : base(BuildErrorMessage(errors))
     {
         Errors = errors;
     }
-    
+
     private static string BuildErrorMessage(IEnumerable<ValidationExceptionModel> errors)
     {
         var arr = errors.Select(x =>
