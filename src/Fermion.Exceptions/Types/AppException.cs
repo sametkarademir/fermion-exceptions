@@ -57,11 +57,13 @@ public abstract class AppException :
         Code = code;
         return this;
     }
+
     public AppException WithDetails(string details)
     {
         Details = details;
         return this;
     }
+
     public AppException WithLogLevel(LogLevel logLevel)
     {
         LogLevel = logLevel;
