@@ -1,4 +1,4 @@
-namespace Fermion.Exceptions.Abstractions;
+namespace Fermion.Exceptions.Interfaces;
 
 public interface IHasCorrelationId
 {

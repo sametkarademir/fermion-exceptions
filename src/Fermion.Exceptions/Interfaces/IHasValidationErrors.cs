@@ -1,6 +1,6 @@
 using Fermion.Exceptions.Models;
 
-namespace Fermion.Exceptions.Abstractions;
+namespace Fermion.Exceptions.Interfaces;
 
 public interface IHasValidationErrors
 {

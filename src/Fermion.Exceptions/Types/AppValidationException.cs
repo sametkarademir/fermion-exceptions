@@ -1,4 +1,4 @@
-using Fermion.Exceptions.Abstractions;
+using Fermion.Exceptions.Interfaces;
 using Fermion.Exceptions.Models;
 using Microsoft.Extensions.Logging;
 

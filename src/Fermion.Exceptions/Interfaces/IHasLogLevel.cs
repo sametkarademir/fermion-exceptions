@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace Fermion.Exceptions.Abstractions;
+namespace Fermion.Exceptions.Interfaces;
 
 public interface IHasLogLevel
 {
